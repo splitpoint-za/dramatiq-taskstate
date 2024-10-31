@@ -124,6 +124,9 @@
                     location.reload()
                 }
             }
+             if (status == 'done'){
+                    location.reload()
+                }
             task_status.textContent = status;
             task_element.dataset.status = status;
 
