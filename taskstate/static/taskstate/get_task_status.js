@@ -120,6 +120,9 @@
                 // completing. The server will automatically set all tasks to
                 // the correct seen status.
                 send_payload(task_seen_socket);
+                if (status == 'done'){
+                    location.reload()
+                }
             }
             task_status.textContent = status;
             task_element.dataset.status = status;
