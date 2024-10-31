@@ -82,10 +82,10 @@
 
     function send_payload(_socket)
     {
-        const payload = JSON.stringify({
-            'pk_list': Array.from(task_set),
-        });
+    if (_socket.readyState === WebSocket.OPEN) {
+        const payload = JSON.stringify({ pk_list: Array.from(task_set) });
         _socket.send(payload);
+    }
     }
 
     task_seen_socket.onopen = (event) =>
