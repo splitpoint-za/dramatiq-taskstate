@@ -139,5 +139,9 @@
                 }
             }
         }
+         if (progress)
+                {
+                    progress.textContent = task.progress + '%';
+                }
     }
 }());
